@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-    int N;
+    string N;
     cin >> N;
-    cout << N / 10000 << " " << (N / 10) % 10 << endl;
+    cout << N[0] << " " << N[3] << endl;
     return 0;
 }

@@ -3,19 +3,12 @@
 
 using namespace std;
 
-void sort(vector<int> & v) {
+void sort(vector<int> &v) {
     int n = v.size();
-    int m, p;
-    for (int i = 0; i < n; i++) {
-        m = v[i];
-        p = i;
-        for (int j = i+1; j < n; j++) {
-            if (v[j] < m) {
-                m = v[j];
-                p = j;
-            }
+    for (int i = 1; i < n; i++) {
+        for (int j = i; j > 0 && v[j - 1] > v[j]; j--) {
+            swap(v[j - 1], v[j]);
         }
-        swap(v[i], v[p]);
     }
 }
 
@@ -26,7 +19,7 @@ int main() {
         a.push_back(t);
     }
     sort(a);
-    for (auto x : a) {
+    for (auto x: a) {
         cout << x << " ";
     }
     return 0;
