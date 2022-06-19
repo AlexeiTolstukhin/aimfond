@@ -11,8 +11,8 @@ int main() {
         a.push_back(t);
     }
     int count = 0;
-    for (int i = 1; i < a.size()-1; i++) {
-        if (a[i] > a[i-1] && a[i] > a[i+1]) {
+    for (int i = 1; i < a.size() - 1; i++) {
+        if (a[i] > a[i - 1] && a[i] > a[i + 1]) {
             count++;
         }
     }

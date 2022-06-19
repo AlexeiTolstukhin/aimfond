@@ -10,14 +10,15 @@ using namespace std;
 int main() {
     int n, d, v, r;
     cin >> n >> d >> v >> r;
-    d--; v--;
-    vector<vector<tuple<int, int, int>>> adj(n, vector<tuple<int, int, int>>());
+    d--;
+    v--;
+    vector < vector < tuple < int, int, int>>> adj(n, vector < tuple < int, int, int >> ());
     for (int i = 0; i < r; i++) {
         int a, b, c, d;
         cin >> a >> b >> c >> d;
-        adj[a-1].push_back({b, c-1, d});
+        adj[a - 1].push_back({b, c - 1, d});
     }
-    priority_queue<pair<int, int>> q;
+    priority_queue <pair<int, int>> q;
     vector<int> time(n, INF);
     vector<bool> processed(n, false);
     time[d] = 0;

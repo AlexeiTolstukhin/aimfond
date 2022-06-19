@@ -1,4 +1,5 @@
 import itertools
+
 w = 'ОДЕКОЛОН'
 a = set()
 for i in itertools.permutations(w, len(w)):

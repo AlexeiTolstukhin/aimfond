@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    int u, v, x ,y;
+    int u, v, x, y;
     cin >> u >> v >> x >> y;
-    if (abs(u-x) <= 1 && abs(v-y) <= 1) {
+    if (abs(u - x) <= 1 && abs(v - y) <= 1) {
         cout << "YES" << endl;
     } else {
         cout << "NO" << endl;

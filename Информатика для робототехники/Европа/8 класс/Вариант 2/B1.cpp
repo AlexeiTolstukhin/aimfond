@@ -3,13 +3,13 @@
 
 using namespace std;
 
-void sort(vector<int> & v) {
+void sort(vector<int> &v) {
     int n = v.size();
     int m, p;
     for (int i = 0; i < n; i++) {
         m = v[i];
         p = i;
-        for (int j = i+1; j < n; j++) {
+        for (int j = i + 1; j < n; j++) {
             if (v[j] > m) {
                 m = v[j];
                 p = j;
@@ -26,7 +26,7 @@ int main() {
         a.push_back(t);
     }
     sort(a);
-    for (auto x : a) {
+    for (auto x: a) {
         cout << x << " ";
     }
     return 0;

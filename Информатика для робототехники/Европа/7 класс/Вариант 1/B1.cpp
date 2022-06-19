@@ -13,7 +13,7 @@ int main() {
     }
     int maxL = 1, l = 1;
     for (int i = 1; i < a.size(); i++) {
-        if (a[i] == a[i-1]) {
+        if (a[i] == a[i - 1]) {
             l++;
         } else {
             maxL = max(maxL, l);

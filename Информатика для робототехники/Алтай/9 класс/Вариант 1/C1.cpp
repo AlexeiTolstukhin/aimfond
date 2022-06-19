@@ -40,7 +40,7 @@ bool operator<(const Card &c1, const Card &c2) {
     return c1.getD() < c2.getD();
 }
 
-pair<string, int> game(queue<Card> &v1, queue<Card> &v2, int n = 0) {
+pair<string, int> game(queue <Card> &v1, queue <Card> &v2, int n = 0) {
     if (v1.empty()) {
         return {"second", n};
     }
@@ -70,10 +70,10 @@ int main() {
     Card h10("10", "hearts");
     Card pJ("J", "peaks");
     Card p10("10", "peaks");
-    queue<Card> p1;
+    queue <Card> p1;
     p1.push(h10);
     p1.push(dQ);
-    queue<Card> p2;
+    queue <Card> p2;
     p2.push(p10);
     p2.push(pJ);
     pair<string, int> res = game(p1, p2);

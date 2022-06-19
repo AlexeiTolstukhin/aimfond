@@ -1,7 +1,8 @@
 import itertools
+
 w = 'АКАДЕМИК'
-v = ['А', 'Е', 'И']
-c = ['К', 'Д', 'М', 'К']
+v = 'АЕИ'
+c = 'КДМК'
 a = set()
 for i in itertools.permutations(w, len(w)):
     s = ''.join(i)

@@ -14,7 +14,7 @@ int main() {
         cin >> p[i];
     }
     cin >> m;
-    vector<vector<pair<int, int>>> adj(n, vector<pair<int, int>>());
+    vector < vector < pair < int, int>>> adj(n, vector < pair < int, int >> ());
     for (int i = 0; i < m; i++) {
         int u, v;
         cin >> u >> v;
@@ -23,7 +23,7 @@ int main() {
         adj[u].push_back({v, p[u]});
         adj[v].push_back({u, p[v]});
     }
-    priority_queue<pair<int, int>> q;
+    priority_queue <pair<int, int>> q;
     vector<int> distance(n, INF);
     vector<bool> processed(n, false);
     distance[0] = 0;
@@ -41,7 +41,7 @@ int main() {
             }
         }
     }
-    if (distance[n-1] == INF) cout << -1;
-    else cout << distance[n-1];
+    if (distance[n - 1] == INF) cout << -1;
+    else cout << distance[n - 1];
     return 0;
 }

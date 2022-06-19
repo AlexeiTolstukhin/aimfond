@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void f(int pos, long long sum, int n, int m, vector<int> & cur, vector<int> & res, vector<int> &a) {
+void f(int pos, long long sum, int n, int m, vector<int> &cur, vector<int> &res, vector<int> &a) {
     if (pos == m) {
         if (sum == n) {
             if (res.empty() || cur.size() < res.size()) {
@@ -21,6 +21,7 @@ void f(int pos, long long sum, int n, int m, vector<int> & cur, vector<int> & re
     cur.pop_back();
     cur.pop_back();
 }
+
 int main() {
     int n, m;
     long long s = 0;
@@ -41,6 +42,6 @@ int main() {
         return 0;
     }
     cout << res.size() << endl;
-    for (auto ans : res) cout << ans << " ";
+    for (auto ans: res) cout << ans << " ";
     return 0;
 }

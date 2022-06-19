@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vector<vector<int>> a(n, vector<int>(n, 0));
+    vector <vector<int>> a(n, vector<int>(n, 0));
     a[0][0] = 1;
     int i = 0, j = 0, h = n, v = n;
     while (true) {

@@ -8,10 +8,10 @@ int main() {
     string a;
     int n = s.size();
     for (int i = 0; i < n; i++) {
-        if (i < n/2) {
+        if (i < n / 2) {
             a.push_back('(');
             a.push_back(s[i]);
-        } else if (n % 2 == 1 && i == n/2) {
+        } else if (n % 2 == 1 && i == n / 2) {
             a.push_back('(');
             a.push_back(s[i]);
             a.push_back(')');

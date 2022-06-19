@@ -78,21 +78,21 @@ public:
 
     void sort() {
         bool flag = false;
-        for (int i = 0; i < q.size()-1; i++) {
-            if (q[i]->getType() == "gnome" && q[i+1]->getType() == "gnome") {
-                if (q[i]->getC1() < q[i+1]->getC1()) {
-                    swap(q[i], q[i+1]);
+        for (int i = 0; i < q.size() - 1; i++) {
+            if (q[i]->getType() == "gnome" && q[i + 1]->getType() == "gnome") {
+                if (q[i]->getC1() < q[i + 1]->getC1()) {
+                    swap(q[i], q[i + 1]);
                     flag = true;
-                } else if (q[i]->getC1() == q[i+1]->getC1() && q[i]->getC2() < q[i+1]->getC2()) {
-                    swap(q[i], q[i+1]);
+                } else if (q[i]->getC1() == q[i + 1]->getC1() && q[i]->getC2() < q[i + 1]->getC2()) {
+                    swap(q[i], q[i + 1]);
                     flag = true;
                 }
-            } else if (q[i]->getType() == "ork" && q[i+1]->getType() == "ork") {
-                if (q[i]->getC1() < q[i+1]->getC1()) {
-                    swap(q[i], q[i+1]);
+            } else if (q[i]->getType() == "ork" && q[i + 1]->getType() == "ork") {
+                if (q[i]->getC1() < q[i + 1]->getC1()) {
+                    swap(q[i], q[i + 1]);
                     flag = true;
-                } else if (q[i]->getC1() == q[i+1]->getC1() && q[i]->getC2() > q[i+1]->getC2()) {
-                    swap(q[i], q[i+1]);
+                } else if (q[i]->getC1() == q[i + 1]->getC1() && q[i]->getC2() > q[i + 1]->getC2()) {
+                    swap(q[i], q[i + 1]);
                     flag = true;
                 }
             }
@@ -101,25 +101,25 @@ public:
     }
 
     void track() {
-        for (int i = q.size()-2; i >= 1; i--) {
-            if (q[i]->getType() == "ork" && q[i+1]->getType() == "ork" && q[i-1]->getType() == "gnome") {
+        for (int i = q.size() - 2; i >= 1; i--) {
+            if (q[i]->getType() == "ork" && q[i + 1]->getType() == "ork" && q[i - 1]->getType() == "gnome") {
                 int count = 0;
-                for (int j = i-1; j >= 0; j--) {
+                for (int j = i - 1; j >= 0; j--) {
                     if (q[j]->getType() == "ork") break;
                     count++;
                 }
                 if (count <= 1) {
-                    swap(q[i-1], q[i+1]);
+                    swap(q[i - 1], q[i + 1]);
                     track();
                     return;
                 }
             }
         }
-        for (int i = q.size()-3; i >= 1; i--) {
-            if (q[i]->getType() == "gnome" && q[i+1]->getType() == "gnome" && q[i+2]->getType() == "gnome" && q[i-1]->getType() == "ork") {
-                swap(q[i-1], q[i+2]);
-                if (i-2 >= 0 && q[i-2]->getType() == "ork") {
-                    swap(q[i-2], q[i+1]);
+        for (int i = q.size() - 3; i >= 1; i--) {
+            if (q[i]->getType() == "gnome" && q[i + 1]->getType() == "gnome" && q[i + 2]->getType() == "gnome" && q[i - 1]->getType() == "ork") {
+                swap(q[i - 1], q[i + 2]);
+                if (i - 2 >= 0 && q[i - 2]->getType() == "ork") {
+                    swap(q[i - 2], q[i + 1]);
                 }
                 track();
                 return;

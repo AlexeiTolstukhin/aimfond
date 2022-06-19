@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Квадраты</title>
+    <style type="text/css">
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -222.5px 0 0 -280px;
+            background: white;
+            width: 560px;
+            height: 445px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .div-1 {
+            width: 330px;
+            height: 445px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .div-1-1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .div-2 {
+            width: 215px;
+            height: 445px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .block-1 {
+            background: #ED7D31;
+            width: 330px;
+            height: 330px;
+        }
+
+        .block-2, .block-3, .block-4 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .block-2 {
+            background: #000;
+        }
+
+        .block-3 {
+            background: #FFC000;
+        }
+
+        .block-4 {
+            background: #5A9BD5;
+        }
+
+        .block-5, .block-6 {
+            width: 215px;
+            height: 215px;
+        }
+
+        .block-5 {
+            background: #70AD46;
+        }
+
+        .block-6 {
+            background: #A5A5A5;
+        }
+
+        form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
+
+        input {
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="div-1">
+        <div class="block block-1"></div>
+        <div class="div-1-1">
+            <div class="block block-2"></div>
+            <div class="block block-3"></div>
+            <div class="block block-4"></div>
+        </div>
+    </div>
+    <div class="div-2">
+        <div class="block block-5"></div>
+        <div class="block block-6"></div>
+    </div>
+</div>
+
+<form>
+    <label for="number">Номер:</label>
+    <input type="number" id="number" name="number" min="1" max="6"><br>
+    <label for="red">Красный:</label>
+    <input type="number" id="red" name="red" min="0" max="255"><br>
+    <label for="green">Зеленый:</label>
+    <input type="number" id="green" name="green" min="0" max="255"><br>
+    <label for="blue">Синий:</label>
+    <input type="number" id="blue" name="blue" min="0" max="255"><br>
+    <button>Раскрасить</button>
+</form>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
